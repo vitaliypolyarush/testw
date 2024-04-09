@@ -2,7 +2,9 @@ import React, { useState } from 'react';
 import DisplayResults from './components/DisplayResults';
 import BenefitsSection from './components/BenefitsSection';
 import PurposeSection from './components/PurposeSection';
+import AdvantagesSection from './components/AdvantagesSection'; // Переконайтесь, що цей компонент створений
 import { GrTest } from "react-icons/gr";
+
 import './App.css'; // Головний файл стилів
 
 function App() {
@@ -15,7 +17,7 @@ function App() {
         event.preventDefault();
         setIsLoading(true); // Запуск індикатора завантаження
         setError(null); // Очищення попередніх помилок
-        const API_KEY = 'AIzaSyCig_j83fEMhRzJei4m1F3pQ1NXG4j4Vf8'; // Замініть на ваш реальний ключ API
+        const API_KEY = 'AIzaSyCig_j83fEMhRzJei4m1F3pQ1NXG4j4Vf8'; // Замініть на ваш реальний API ключ
 
         const apiUrl = `https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=${encodeURIComponent(url)}&key=${API_KEY}`;
 
@@ -32,30 +34,33 @@ function App() {
     };
 
     return (
-      <div className="app">
-        <BenefitsSection />
-        <div className="icon-container">
-          <GrTest size="3em" /> {/* Розмір іконки */}
+        <div className="app">
+            <BenefitsSection />
+            <div className="icon-container">
+                <GrTest size="3em" /> {/* Розмір іконки */}
+            </div>
+            <PurposeSection />
+            
+            <div className="form-container">
+                <h1>Тест продуктивності веб-сайту</h1>
+                <form onSubmit={handleSubmit} className="test-form">
+                    <input
+                        type="text"
+                        placeholder="Введіть URL вашого веб-сайту"
+                        value={url}
+                        onChange={(e) => setUrl(e.target.value)}
+                    />
+                    <button type="submit" disabled={isLoading}>Розпочати тестування</button>
+                </form>
+                {isLoading && <p>Завантаження...</p>}
+                {error && <p>{error}</p>}
+                {!isLoading && !error && results && <DisplayResults results={results} />}
+            </div>
+            
+            <AdvantagesSection />
+      
         </div>
-        <PurposeSection />
-  
-        <div className="form-container">
-          <h1>Тест продуктивності веб-сайту</h1>
-          <form onSubmit={handleSubmit} className="test-form">
-            <input
-              type="text"
-              placeholder="Введіть URL вашого веб-сайту"
-              value={url}
-              onChange={(e) => setUrl(e.target.value)}
-            />
-            <button type="submit" disabled={isLoading}>Розпочати тестування</button>
-          </form>
-          {isLoading && <p>Завантаження...</p>}
-          {error && <p>{error}</p>}
-          {!isLoading && !error && results && <DisplayResults results={results} />}
-        </div>
-      </div>
     );
-  }
+}
 
 export default App;

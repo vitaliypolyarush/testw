@@ -1,0 +1,49 @@
+.advantages-container {
+    display: flex;
+    justify-content: space-around; /* Рівномірно розподіляє простір */
+    align-items: center;
+    margin: 20px 0;
+
+
+  padding-bottom: 100px;
+    gap: 40px; /* Встановлює відстань між кружками */
+}
+
+.advantage-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px; /* Регулювання розміру за потребою */
+    height: 300px; /* Така ж ширина, щоб створити круг */
+    border-radius: 50%; /* Створює круг */
+    background-color: rgba(225, 225, 225, 0.224);
+    color: #c7c7c7;
+    font-size: 35px; /* Регулювання розміру шрифту за потребою */
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Опціонально: Додає легку тінь */
+    transition: transform 0.3s;
+}
+
+.advantage-item:hover {
+    transform: scale(1.1); /* Легке збільшення при наведенні */
+}
+.advantages-section-background {
+    position: relative;
+    text-align: center;
+    padding: 50px 0;
+  }
+  
+  .advantages-background-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150vw;
+    height: 150vh;
+    color: rgba(97, 218, 251, 0.05);
+    z-index: -1;
+    margin-top: 900px;
+  }
+  
+  /* Стилі для вашої секції переваг */
+  
