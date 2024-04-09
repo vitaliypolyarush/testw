@@ -1,6 +1,7 @@
 import React from 'react';
 import '../App.css';
 
+
 function DisplayResults({ results }) {
     // Перевірка на базову наявність результатів
     if (!results) {
@@ -8,13 +9,7 @@ function DisplayResults({ results }) {
     }
 
     // Функція для отримання значень метрик з аудитів
-    const getAuditValue = (auditKey) => {
-        const audit = results.lighthouseResult.audits[auditKey];
-        if (audit && audit.displayValue) {
-            return audit.displayValue;
-        }
-        return 'Недоступно';
-    };
+  
 
     // Список ключових метрик для відображення
     const metrics = [
