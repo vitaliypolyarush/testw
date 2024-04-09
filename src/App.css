@@ -1,0 +1,141 @@
+/* App.css */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #1c1c1e;
+  color: #c7c7c7;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  color: #dcdcdc;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  border: 2px solid #5e5ce6;
+  background-color: #262626;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  width: 300px;
+}
+
+button {
+  background-color: #5e5ce6;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #7d7cfa;
+}
+
+button:disabled {
+  background-color: #4a4a4a;
+  cursor: not-allowed;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background-color: #2c2c2e;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+header, section {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Додаткові стилі можна додати за потребою */
+.results-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.result-item {
+  flex-basis: calc(33.333% - 20px); /* Віднімаємо gap */
+  background-color: #2c2c2e;
+  color: #dcdcdc;
+  padding: 20px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.result-item h3 {
+  margin: 10px 0;
+  color: #5e5ce6; /* Фіолетовий для заголовків результатів, щоб вони були замітнішими */
+  font-size: 1.2rem;
+}
+
+.result-item p {
+  font-size: 1.5rem; /* Робимо самі результати більшими */
+  font-weight: bold;
+}
+.app {
+  text-align: center;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 144px;
+  margin-top: 150px;
+  margin-bottom: 250px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.test-form {
+  width: 100%; /* Адаптуйте ширину форми відповідно до ваших потреб */
+}
+
+.test-form input {
+  margin-bottom: 20px; /* Додає відступи між input і кнопкою */
+}
+
+.test-form button {
+  cursor: pointer;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #5e5ce6;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.test-form button:hover {
+  background-color: #7d7cfa;
+}
+
+.test-form button:disabled {
+  background-color: #4a4a4a;
+}

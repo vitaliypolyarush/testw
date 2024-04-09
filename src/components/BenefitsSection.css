@@ -1,0 +1,20 @@
+.benefits-section {
+    background-color:  rgba(106, 106, 114, 0.8);
+    color: #c7c7c7;
+    padding: 20px;
+    width: 400px !important; 
+    border-radius: 5px;
+    animation: appear 2s ease-out forwards;
+    border-top-right-radius: 5px !important;
+    border-bottom-right-radius: 40px !important; 
+    border-top-left-radius: 35px !important;
+    position: absolute;
+    right: 750px ;
+    top: 150px;
+}
+
+
+@keyframes appear {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

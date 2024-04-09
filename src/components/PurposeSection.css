@@ -1,0 +1,27 @@
+.purpose-section {
+    background-color: rgba(106, 106, 114, 0.8);
+    color: #c7c7c7;
+    padding: 20px;
+    width: 400px !important; 
+    border-radius: 40px;
+    animation: appear 4s ease-out forwards;
+    border-top-right-radius: 35px !important;
+    border-bottom-right-radius: 5px !important; 
+    border-top-left-radius:5px  !important;
+position: absolute;
+top: 425px;
+left: 750px;
+display: block;
+justify-content: end;
+
+    
+}
+.purpose{
+    display: flex;
+    justify-content: flex-end;
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
